@@ -5,6 +5,7 @@ import { Button, View, Text, StyleSheet } from 'react-native'
 function Todo({todos,changeStyleTodo,removeTodo}) {
 
     return todos.length>0? todos.map((todo,index)=>(
+        
         <View
             key={index}
             style={todo.isChanged?styles.listItemViewChecked:styles.listItemView}

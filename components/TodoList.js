@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { View, Text, Alert } from 'react-native'
+import { View, Text, Alert, ScrollView } from 'react-native'
 import TodoForm from './TodoForm'
 import Todo from './Todo'
 
@@ -42,14 +42,18 @@ function TodoList() {
         lastPress= now
     }
     return (
-        <View>
-            <TodoForm addItem={addItem} />
-            <Todo 
-                todos={todos}
-                changeStyleTodo={changeStyleTodo}
-                removeTodo={removeTodo}
-            />
-        </View>
+        <>
+            <View>
+                <TodoForm addItem={addItem} />
+            </View>
+            <ScrollView>
+                <Todo 
+                    todos={todos}
+                    changeStyleTodo={changeStyleTodo}
+                    removeTodo={removeTodo}
+                />
+            </ScrollView>
+        </>
     )
 }
 

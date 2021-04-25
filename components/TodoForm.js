@@ -8,7 +8,7 @@ const TodoForm=({addItem})=> {
   const handleSubmit=()=>{
     addItem({
       id:Math.floor(Math.random()*10000),
-      text:text,
+      title:text,
       isChanged: false
     })
     txtInput.current.clear();
